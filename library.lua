@@ -206,6 +206,7 @@ function library:Notify(NotifText, delay)
 	Notification.BorderSizePixel = 0
 	Notification.Position = UDim2.new(0.0111023001, 0, 0.853080571, 0)
 	Notification.Size = UDim2.new(0, 300, 0, 81)
+	Notification.Visible = false
 
 	Outerframe3.Name = "Outerframe 3"
 	Outerframe3.Parent = Notification
@@ -279,6 +280,9 @@ function library:Notify(NotifText, delay)
 	Text.TextXAlignment = Enum.TextXAlignment.Left
 	Text.TextYAlignment = Enum.TextYAlignment.Top
 
+	wait(0.5)
+	Notification.Visible = true
+	wait(0.5)
 	Notification:TweenPosition(UDim2.new(0.011, 0,0.853, 0), InOut, Sine, 0.2)
 	wait(delay)
 	Notification:Destroy()
