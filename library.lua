@@ -29,7 +29,7 @@ function library:CreateWindow(TitleText)
 	Main.Parent = Wistful_UI
 	Main.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
 	Main.BorderSizePixel = 0
-	Main.Position = UDim2.new(0.165741473, 0, 0.12164297, 0)
+	Main.Position = UDim2.new(-0.233, 0,0.859, 0)
 	Main.Size = UDim2.new(0, 829, 0, 466)
 	local UserInputService = game:GetService("UserInputService")
 	local gui = Main
