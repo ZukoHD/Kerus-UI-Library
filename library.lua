@@ -164,24 +164,120 @@ function library:CreateWindow(TitleText)
 
 	function libwin:CreateButton(text, callback)
 		local callback = callback or function() end
-			local Aimbot = Instance.new("TextButton")
+		local Aimbot = Instance.new("TextButton")
 
-			Aimbot.Name = text
-			Aimbot.Parent = game.CoreGui.Wistful_UI.Main.Container
-			Aimbot.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
-			Aimbot.BorderSizePixel = 0
-			Aimbot.Position = UDim2.new(-0.276305169, 0, 0.427260637, 0)
-			Aimbot.Size = UDim2.new(0, 191, 0, 42)
-			Aimbot.Font = Enum.Font.Gotham
-			Aimbot.Text = text
-			Aimbot.TextColor3 = Color3.fromRGB(217, 217, 217)
-			Aimbot.TextSize = 22.000
-			Aimbot.TextWrapped = true
-			Aimbot.MouseButton1Click:Connect(function()
-				pcall(callback)
-			end)
+		Aimbot.Name = text
+		Aimbot.Parent = game.CoreGui.Wistful_UI.Main.Container
+		Aimbot.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+		Aimbot.BorderSizePixel = 0
+		Aimbot.Position = UDim2.new(-0.276305169, 0, 0.427260637, 0)
+		Aimbot.Size = UDim2.new(0, 191, 0, 42)
+		Aimbot.Font = Enum.Font.Gotham
+		Aimbot.Text = text
+		Aimbot.TextColor3 = Color3.fromRGB(217, 217, 217)
+		Aimbot.TextSize = 22.000
+		Aimbot.TextWrapped = true
+		Aimbot.MouseButton1Click:Connect(function()
+			pcall(callback)
+		end)
 	end	
 	return libwin
+end
+
+function library:Notify(NotifText)
+	local Notification = Instance.new("Frame")
+	local Outerframe3 = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local UIGradient = Instance.new("UIGradient")
+	local Outerframe2 = Instance.new("Frame")
+	local UICorner_2 = Instance.new("UICorner")
+	local UIGradient_2 = Instance.new("UIGradient")
+	local Outerframe1 = Instance.new("Frame")
+	local UICorner_3 = Instance.new("UICorner")
+	local UICorner_4 = Instance.new("UICorner")
+	local Outerframe4 = Instance.new("Frame")
+	local UICorner_5 = Instance.new("UICorner")
+	local Title = Instance.new("TextLabel")
+	local Text = Instance.new("TextLabel")
+
+	Notification.Name = "Notification"
+	Notification.Parent = game.CoreGui.Wistful_UI
+	Notification.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+	Notification.BorderSizePixel = 0
+	Notification.Position = UDim2.new(0.0111023001, 0, 0.853080571, 0)
+	Notification.Size = UDim2.new(0, 300, 0, 81)
+
+	Outerframe3.Name = "Outerframe 3"
+	Outerframe3.Parent = Notification
+	Outerframe3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Outerframe3.BorderSizePixel = 0
+	Outerframe3.Position = UDim2.new(0, 0, 0.896106839, 0)
+	Outerframe3.Size = UDim2.new(0, 307, 0, 8)
+
+	UICorner.CornerRadius = UDim.new(0, 16)
+	UICorner.Parent = Outerframe3
+
+	UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.24, Color3.fromRGB(243, 255, 0)), ColorSequenceKeypoint.new(0.42, Color3.fromRGB(4, 246, 0)), ColorSequenceKeypoint.new(0.65, Color3.fromRGB(0, 221, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 0, 209))}
+	UIGradient.Parent = Outerframe3
+
+	Outerframe2.Name = "Outerframe 2"
+	Outerframe2.Parent = Notification
+	Outerframe2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Outerframe2.BorderSizePixel = 0
+	Outerframe2.Size = UDim2.new(0, 307, 0, 8)
+
+	UICorner_2.CornerRadius = UDim.new(0, 16)
+	UICorner_2.Parent = Outerframe2
+
+	UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.24, Color3.fromRGB(243, 255, 0)), ColorSequenceKeypoint.new(0.42, Color3.fromRGB(4, 246, 0)), ColorSequenceKeypoint.new(0.65, Color3.fromRGB(0, 221, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 0, 209))}
+	UIGradient_2.Parent = Outerframe2
+
+	Outerframe1.Name = "Outerframe 1"
+	Outerframe1.Parent = Notification
+	Outerframe1.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	Outerframe1.BorderSizePixel = 0
+	Outerframe1.Size = UDim2.new(0, 7, 0, 81)
+
+	UICorner_3.CornerRadius = UDim.new(0, 16)
+	UICorner_3.Parent = Outerframe1
+
+	UICorner_4.CornerRadius = UDim.new(0, 16)
+	UICorner_4.Parent = Notification
+
+	Outerframe4.Name = "Outerframe 4"
+	Outerframe4.Parent = Notification
+	Outerframe4.BackgroundColor3 = Color3.fromRGB(255, 0, 209)
+	Outerframe4.BorderSizePixel = 0
+	Outerframe4.Position = UDim2.new(1, 0, 0, 0)
+	Outerframe4.Size = UDim2.new(0, 7, 0, 81)
+
+	UICorner_5.CornerRadius = UDim.new(0, 16)
+	UICorner_5.Parent = Outerframe4
+
+	Title.Name = "Title"
+	Title.Parent = Notification
+	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title.BackgroundTransparency = 1.000
+	Title.Position = UDim2.new(0.0378086343, 0, 0.246357486, 0)
+	Title.Size = UDim2.new(0, 103, 0, 12)
+	Title.Font = Enum.Font.GothamBold
+	Title.Text = "Notification,"
+	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Title.TextSize = 14.000
+
+	Text.Name = NotifText
+	Text.Parent = Notification
+	Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Text.BackgroundTransparency = 1.000
+	Text.Position = UDim2.new(0.0711419657, 0, 0.46857971, 0)
+	Text.Size = UDim2.new(0, 265, 0, 28)
+	Text.Font = Enum.Font.Gotham
+	Text.Text = NotifText
+	Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Text.TextSize = 14.000
+	Text.TextWrapped = true
+	Text.TextXAlignment = Enum.TextXAlignment.Left
+	Text.TextYAlignment = Enum.TextYAlignment.Top	
 end
 
 return library
