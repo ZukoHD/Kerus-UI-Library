@@ -278,8 +278,16 @@ function library:Notify(NotifText, delay)
 	Text.TextWrapped = true
 	Text.TextXAlignment = Enum.TextXAlignment.Left
 	Text.TextYAlignment = Enum.TextYAlignment.Top
-	wait(delay)
-	Notification:Destroy()
+
+	UI = Notification
+
+	UI:TweenPosition(UDim2.new(0.97, 0, UI.Position.Y.Scale - 0.12, 0),"InOut","Linear",0.2,true)
+	UI:TweenPosition(UDim2.new(0.97, 0, 0.85, 0),"InOut","Linear",0.2,true)
+
+	delay(delay,function()
+		UI:TweenPosition(UDim2.new(1.5, 0, UI.Position.Y.Scale, 0),"InOut","Linear",0.2,true);wait(0.2)
+		UI:Destroy()
+	end)
 end
 
 return library
