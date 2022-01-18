@@ -23,6 +23,7 @@ function library:CreateWindow(TitleText)
 	Wistful_UI.Name = "Wistful_UI"
 	Wistful_UI.Parent = game.CoreGui
 	Wistful_UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	Wistful_UI.ResetOnSpawn = false
 
 	Main.Name = "Main"
 	Main.Parent = Wistful_UI
