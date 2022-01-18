@@ -1,4 +1,4 @@
-local lib = loadstring(game:HttpGet("https://pastebin.com/raw/3uTEfEs0",true))()
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZukoHD/Kerus-UI-Library/main/library.lua",true))()
 
 button = lib:CreateWindow('Example - ???')
 button:CreateButton('Example', function()
