@@ -4,5 +4,3 @@ button = lib:CreateWindow('Example - ???')
 button:CreateButton('Example', function()
 	print('example button works')
 end)
-
-
