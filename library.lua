@@ -184,7 +184,7 @@ function library:CreateWindow(TitleText)
 	return libwin
 end
 
-function library:Notify(NotifText)
+function library:Notify(NotifText, delay)
 	local Notification = Instance.new("Frame")
 	local Outerframe3 = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
@@ -277,7 +277,9 @@ function library:Notify(NotifText)
 	Text.TextSize = 14.000
 	Text.TextWrapped = true
 	Text.TextXAlignment = Enum.TextXAlignment.Left
-	Text.TextYAlignment = Enum.TextYAlignment.Top	
+	Text.TextYAlignment = Enum.TextYAlignment.Top
+	wait(delay)
+	Notification:Destroy()
 end
 
 return library
