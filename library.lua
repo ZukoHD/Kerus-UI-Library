@@ -281,7 +281,7 @@ function library:Notify(NotifText, delay)
 
 	UI = Notification
 
-	UI:TweenPosition(UDim2.new(0.97, 0, UI.Position.Y.Scale - 0.12, 0),"InOut","Linear",0.2,true)
+	UI:TweenPosition(UDim2.new(0.753, 0,0.861, 0, UI.Position.Y.Scale - 0.12, 0),"InOut","Linear",0.2,true)
 	UI:TweenPosition(UDim2.new(0.011, 0,0.853, 0),"InOut","Linear",0.2,true)
 
 	delay(delay,function()
