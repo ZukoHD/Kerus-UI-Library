@@ -205,7 +205,7 @@ function library:Notify(NotifText, delay)
 	Notification.Parent = game.CoreGui.Wistful_UI
 	Notification.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
 	Notification.BorderSizePixel = 0
-	Notification.Position = UDim2.new(0.0111023001, 0, 0.853080571, 0)
+	Notification.Position = UDim2.new(-0.233, 0,0.859, 0)
 	Notification.Size = UDim2.new(0, 300, 0, 81)
 	Notification.Visible = false
 
