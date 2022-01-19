@@ -5,3 +5,6 @@ If you would like to implement Kerus UI Library into your script, do so by addin
 ```
 local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZukoHD/Kerus-UI-Library/main/library.lua",true))()
 ```
+You now have Kerus UI Library in your script! But to fully add Kerus UI into your script and use it, You must learn the functions of it below.
+# Functions And About them/ Documentation
+
