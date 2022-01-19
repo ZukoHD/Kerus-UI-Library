@@ -161,9 +161,11 @@ function library:CreateWindow(TitleText)
 	Credit.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Credit.TextSize = 14.000
 
-	local libwin = {}
+	local libwinw = {}
 
-	function libwin:CreateButton(text, callback)
+	function libwinw:CreateButton(text, callback)
+        local libwinb = {}
+
 		local callback = callback or function() end
 		local Aimbot = Instance.new("TextButton")
 
@@ -181,8 +183,20 @@ function library:CreateWindow(TitleText)
 		Aimbot.MouseButton1Click:Connect(function()
 			pcall(callback)
 		end)
-	end	
-	return libwin
+        function libwinb:Delete()
+            Aimbot:Destroy()
+        end
+        function libwinb:Edit(etext)
+            Aimbot.Name = etext
+            Aimbot.Text = etext
+        end
+        return libwinb
+	end
+
+    function libwinw:Delete()
+        Wistful_UI:Destroy()
+    end
+	return libwinw
 end
 
 function library:Notify(NotifText, delay)
