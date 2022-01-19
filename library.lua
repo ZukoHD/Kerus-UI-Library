@@ -200,7 +200,9 @@ function library:CreateWindow(TitleText)
 	return libwinw
 end
 
-function library:Notify(NotifText, delay)
+function library:Notify(NotifText)
+    local libwinn = {}
+
 	local Notification = Instance.new("Frame")
 	local Outerframe3 = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
@@ -296,12 +298,14 @@ function library:Notify(NotifText, delay)
 	Text.TextXAlignment = Enum.TextXAlignment.Left
 	Text.TextYAlignment = Enum.TextYAlignment.Top
 
+    function libwinn:Delete()
+        Notification:Destroy()
+    end
 	wait(0.5)
 	Notification.Visible = true
 	wait(0.5)
 	Notification:TweenPosition(UDim2.new(0.011, 0,0.853, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.2)
-	wait(delay)
-	Notification:Destroy()
+    return libwinn
 end
 
 return library
