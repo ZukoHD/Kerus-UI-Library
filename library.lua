@@ -197,9 +197,9 @@ function library:CreateWindow(TitleText)
 	function libwinw:Delete()
 		Wistful_UI:Destroy()
 	end
-    
-    function libwinw:Edit()
-        Title.Text = TitleText
+
+    function libwinw:Edit(titlename)
+        Title.Text = titlename
     end
 	return libwinw
 end
