@@ -51,6 +51,4 @@ local button3 = Window:CreateButton('Change Button Name', function()
     wait(4)
     button3:Edit('Change Button Name')
 end)
-
-
 ```
