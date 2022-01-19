@@ -197,6 +197,10 @@ function library:CreateWindow(TitleText)
 	function libwinw:Delete()
 		Wistful_UI:Destroy()
 	end
+    
+    function libwinw:Edit()
+        Title.Text = TitleText
+    end
 	return libwinw
 end
 
@@ -300,6 +304,10 @@ function library:Notify(NotifText)
 
     function libwinn:Delete()
         Notification:Destroy()
+    end
+    function libwinn:Edit(daedit)
+        Text.Name = daedit
+	    Text.Text = daedit
     end
 	wait(0.5)
 	Notification.Visible = true
