@@ -164,7 +164,7 @@ function library:CreateWindow(TitleText)
 	local libwinw = {}
 
 	function libwinw:CreateButton(text, callback)
-        local libwinb = {}
+		local libwinb = {}
 
 		local callback = callback or function() end
 		local Aimbot = Instance.new("TextButton")
@@ -183,19 +183,19 @@ function library:CreateWindow(TitleText)
 		Aimbot.MouseButton1Click:Connect(function()
 			pcall(callback)
 		end)
-        function libwinb:Delete()
-            Aimbot:Destroy()
-        end
-        function libwinb:Edit(etext)
-            Aimbot.Name = etext
-            Aimbot.Text = etext
-        end
-        return libwinb
+		function libwinb:Delete()
+			Aimbot:Destroy()
+		end
+		function libwinb:Edit(etext)
+			Aimbot.Name = etext
+			Aimbot.Text = etext
+		end
+		return libwinb
 	end
 
-    function libwinw:Delete()
-        Wistful_UI:Destroy()
-    end
+	function libwinw:Delete()
+		Wistful_UI:Destroy()
+	end
 	return libwinw
 end
 
@@ -298,7 +298,7 @@ function library:Notify(NotifText, delay)
 	wait(0.5)
 	Notification.Visible = true
 	wait(0.5)
-	Notification:TweenPosition(UDim2.new(0.011, 0,0.853, 0), InOut, Sine, 0.2)
+	Notification:TweenPosition(UDim2.new(0.011, 0,0.853, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.2)
 	wait(delay)
 	Notification:Destroy()
 end
