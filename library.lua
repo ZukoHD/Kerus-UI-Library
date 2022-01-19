@@ -139,6 +139,7 @@ function library:CreateWindow(TitleText)
 	Close.Parent = Main
 	Close.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
 	Close.BorderSizePixel = 0
+    Close.BackgroundTransparency = 1.000
 	Close.Position = UDim2.new(0.94323647, 0, 0.0300429184, 0)
 	Close.Size = UDim2.new(0, 35, 0, 21)
 	Close.Font = Enum.Font.Gotham
