@@ -25,3 +25,32 @@ local <string> = Window:CreateButton(<string>, function()
 end)
 ```
 The CreateButton function has 2 parameters and those paremeters are the text and then the function as shown above, All are required parameters. This function's use is to create a button.
+# Example
+Below will be an example of everything above and will change as more feature are added.
+```
+-- Get the actual library
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZukoHD/Kerus-UI-Library/main/library.lua",true))()
+
+-- Create a window and buttons
+local Window = lib:CreateWindow('Showcase Hub')
+local button1 = Window:CreateButton('Notification', function()
+    -- Define function
+	notif = lib:Notify('Notification from Kerus!')
+    wait(4)
+    notif:Delete()
+end)
+
+-- Same above for the rest
+local button2 = Window:CreateButton('Change Name', function()
+	Window:Edit('Name Changed!')
+    wait(4)
+    Window:Edit('Showcase Hub')
+end)
+local button3 = Window:CreateButton('Change Button Name', function()
+	button3:Edit('Name Changed!')
+    wait(4)
+    button3:Edit('Change Button Name')
+end)
+
+
+```
