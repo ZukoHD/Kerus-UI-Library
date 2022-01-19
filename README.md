@@ -15,3 +15,13 @@ The CreateWindow function has 1 parameter and that paremeter is the title, It is
 local notif = lib:Notify(<string>)
 ```
 The Notify function has 1 parameter and that paremeter is the text, It is a required parameter. This function's use is to create a notification.
+```
+<Window>:Edit(<string>)
+```
+The Edit function has 1 parameter and that paremeter is the text, It is a required parameter. This function's use is to edit almost anything.
+```
+local <string> = Window:CreateButton(<string>, function()
+    -- Script Here
+end)
+```
+The CreateButton function has 2 parameters and those paremeters are the text and then the function as shown above, All are required parameters. This function's use is to create a button.
